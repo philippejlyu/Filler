@@ -46,7 +46,7 @@ class Filler:
                 if c > 0 and self.board[r][c - 1] in available_colors:
                     available_colors.remove(self.board[r][c - 1])
                 self.board[r][c] = random.choice(available_colors)
-        # Ensure that the 2 colors that are adjcacent to the starting positions are different
+        # Ensure that the 2 starting postions are different colors
         if self.board[0][7] == self.board[7][0]:
             available_colors = self.colors[:]
             if self.board[0][6] in available_colors:
